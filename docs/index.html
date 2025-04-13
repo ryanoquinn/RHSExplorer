@@ -326,34 +326,39 @@
     // Class Explorer Code
     // ---------------------
     const allClasses = [
-      // English classes
-      { subject: "English", teacher: "Mr. Boyd", description: "English Grammar Essentials", room: "203", grade: 9 },
-      { subject: "English", teacher: "Mrs. Deel", description: "Creative Writing Workshop", room: "202", grade: 11 },
-      { subject: "English", teacher: "Mrs. Sykes", description: "American Literature Studies", room: "204", grade: 12 },
-      { subject: "English", teacher: "Mrs. Graham", description: "Literature & Writing", room: "201", grade: 10 },
-      // Math classes
-      { subject: "Math", teacher: "Mrs. Tiller", description: "Pre-Calculus Foundations", room: "103", grade: 11 },
-      { subject: "Math", teacher: "Mr. Dingus", description: "Computer Math", room: "104", grade: 9 },
-      { subject: "Math", teacher: "Mr. O'Quin", description: "Algebra 2", room: "102", grade: [10,11] },
-      { subject: "Math", teacher: "Mrs. Greear", description: "Algebra and Geometry", room: "101", grade: 9 },
-      // Physical Education classes
-      { subject: "Physical Education", teacher: "Mrs. Grant", description: "Sports and Fitness", room: "401", grade: 9 },
-      { subject: "Physical Education", teacher: "Mr. Mullins", description: "Team Sports and Coordination", room: "402", grade: 10 },
-      { subject: "Physical Education", teacher: "Mr. Stanley", description: "Personal Fitness & Conditioning", room: "403", grade: 11 },
-      // Robotics classes
-      { subject: "Robotics", teacher: "Mr. Tiller", description: "Introduction to Robotics", room: "102", grade: 9 },
-      { subject: "Robotics", teacher: "Mr. Tiller", description: "Intermediate Robotics", room: "102", grade: [10, 11] },
-      { subject: "Robotics", teacher: "Mrs. Tiller", description: "Advanced Robotics; prepared for FRC Competitions", room: "304", grade: 12 },
-      // Science classes
-      { subject: "Science", teacher: "Mrs. Yates", description: "Biology with Labs", room: "301", grade: 9 },
-      { subject: "Science", teacher: "Mr. Counts", description: "Biology with Labs", room: "301", grade: 10 },
-      { subject: "Science", teacher: "Mr. Compton", description: "Chemistry Concepts", room: "303", grade: [11,12] },
-      { subject: "Science", teacher: "Mr. White", description: "Environmental Science", room: "304", grade: [9,10] },
-      { subject: "Science", teacher: "Mr. Rose", description: "Intro to Geology", room: "302", grade: [9,10,11,12] },
-      // Weightlifting classes
-      { subject: "Weightlifting", teacher: "Mr. Stanley", description: "Basic Weightlifting Techniques", room: "601", grade: [9,10] },
-      { subject: "Weightlifting", teacher: "Mr. Stanley and Mr. Grant", description: "Advanced Weightlifting; typically for football players", room: "602", grade: [10,11] }
-    ];
+  // English classes
+  { subject: "English", teacher: "Mr. Boyd", description: "English Grammar Essentials", room: "203", grade: 9 },
+  { subject: "English", teacher: "Mrs. Deel", description: "Creative Writing Workshop", room: "202", grade: 11 },
+  { subject: "English", teacher: "Mrs. Sykes", description: "American Literature Studies", room: "204", grade: 12 },
+  { subject: "English", teacher: "Mrs. Graham", description: "Literature & Writing", room: "201", grade: 10 },
+  // Math classes
+  { subject: "Math", teacher: "Mrs. Tiller", description: "Pre-Calculus Foundations", room: "103", grade: 11 },
+  { subject: "Math", teacher: "Mr. Dingus", description: "Computer Math", room: "104", grade: 9 },
+  { subject: "Math", teacher: "Mr. O'Quin", description: "Algebra 2", room: "102", grade: [10, 11] },
+  { subject: "Math", teacher: "Mrs. Greear", description: "Algebra and Geometry", room: "101", grade: 9 },
+  // Physical Education classes
+  { subject: "Physical Education", teacher: "Mrs. Grant", description: "Sports and Fitness", room: "401", grade: 9 },
+  { subject: "Physical Education", teacher: "Mr. Mullins", description: "Team Sports and Coordination", room: "402", grade: 10 },
+  { subject: "Physical Education", teacher: "Mr. Stanley", description: "Personal Fitness & Conditioning", room: "403", grade: 11 },
+  // Robotics classes
+  { subject: "Robotics", teacher: "Mr. Tiller", description: "Introduction to Robotics", room: "102", grade: 9 },
+  { subject: "Robotics", teacher: "Mr. Tiller", description: "Intermediate Robotics", room: "102", grade: [10, 11] },
+  { subject: "Robotics", teacher: "Mrs. Tiller", description: "Advanced Robotics; prepared for FRC Competitions", room: "304", grade: 12 },
+  // Science classes
+  { subject: "Science", teacher: "Mrs. Yates", description: "Biology with Labs", room: "301", grade: 9 },
+  { subject: "Science", teacher: "Mr. Counts", description: "Biology with Labs", room: "301", grade: 10 },
+  { subject: "Science", teacher: "Mr. Compton", description: "Chemistry Concepts", room: "303", grade: [11, 12] },
+  { subject: "Science", teacher: "Mr. White", description: "Environmental Science", room: "304", grade: [9, 10] },
+  { subject: "Science", teacher: "Mr. Rose", description: "Intro to Geology", room: "302", grade: [9, 10, 11, 12] },
+  // Weightlifting classes
+  { subject: "Weightlifting", teacher: "Mr. Stanley", description: "Basic Weightlifting Techniques", room: "601", grade: [9, 10] },
+  { subject: "Weightlifting", teacher: "Mr. Stanley and Mr. Grant", description: "Advanced Weightlifting; typically for football players", room: "602", grade: [10, 11] },
+  // History classes
+  { subject: "History", teacher: "Mr. Brent Deel", description: "World History II", room: "302", grade: [10, 11] },
+  { subject: "History", teacher: "Mr. Brent Deel", description: "U.S. Government", room: "302", grade: 12 },
+  { subject: "History", teacher: "Mr. Nick Lyall", description: "U.S. History", room: "304", grade: [10, 11] }
+];
+
     
     let favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
     
