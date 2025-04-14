@@ -177,12 +177,7 @@
       justify-content: center;
       z-index: 101;
     }
-    .tip-left {
-      position: absolute;
-      left: 15px;
-      font-size: 14px;  /* Set creator text font size */
-      color: #FFFFFF;   /* Set creator text font color */
-    }
+    /* Removed tip-left since the creator text has been moved to the footer */
     .tip-center {
       flex: 1;
       text-align: center;
@@ -291,12 +286,14 @@
       <div id="favoriteList"></div>
     </div>
   
-    <footer>&copy; 2025 Ridgeview High School</footer>
+    <footer>
+      &copy; 2025 Ridgeview High School<br>
+      Created by Ryan O'Quinn, Class of 2025
+    </footer>
   </div>
   
-  <!-- Tip Widget with Separate Text Elements -->
+  <!-- Tip Widget with only the tip text -->
   <div class="tip-widget" id="tipWidget">
-    <div class="tip-left">Created by Ryan O'Quinn, Class of 2025</div>
     <div class="tip-center">Tip of the Day: Stay organized by checking your schedule daily!</div>
   </div>
   
