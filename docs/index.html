@@ -163,32 +163,31 @@
       font-size: 14px;
       color: #555;
     }
-    /* Tip Widget Styles */
+    /* Tip Widget Styles - now with flex for separate text elements */
     .tip-widget {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
       background-color: var(--blue);
-      color: var(--white);
       padding: 15px;
-      text-align: center;
-      font-size: 16px;
       box-shadow: 0 -2px 8px var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 101;
     }
-    /* Creator Trademark Style */
-    .creator-trademark {
-      position: fixed;
-      bottom: 5px;
-      left: 5px;
-      font-size: 12px;
-      color: var(--black);
-      opacity: 0.7;
-      z-index: 100; /* Ensures it appears above other elements */
+    .tip-left {
+      position: absolute;
+      left: 15px;
+      font-size: 14px;  /* Set creator text font size */
+      color: #FFFFFF;   /* Set creator text font color */
     }
-    /* Center sports output text */
-    #sportsOutput {
+    .tip-center {
+      flex: 1;
       text-align: center;
+      font-size: 18px;  /* Set tip text font size */
+      color: #ffffff;   /* Set tip text font color */
     }
     /* Favorites overlay styling (placed on top of tab content) */
     #favoritesOverlay {
@@ -295,14 +294,10 @@
     <footer>&copy; 2025 Ridgeview High School</footer>
   </div>
   
-  <!-- Tip Widget -->
+  <!-- Tip Widget with Separate Text Elements -->
   <div class="tip-widget" id="tipWidget">
-    Tip of the Day: Stay organized by checking your schedule daily!
-  </div>
-  
-  <!-- Creator Trademark -->
-  <div class="creator-trademark">
-    Created by Ryan O'Quinn, Class of 2025
+    <div class="tip-left">Created by Ryan O'Quinn, Class of 2025</div>
+    <div class="tip-center">Tip of the Day: Stay organized by checking your schedule daily!</div>
   </div>
   
   <script>
@@ -576,16 +571,16 @@
     // ---------------------
     const tips = [
       "Remember to get to class on time!",
-      "Stay organized by using a planner and by reading the morning announcements.",
+      "Stay organized by reading the morning announcements.",
       "dcps.k12.va.us",
       "Reach out to your teachers if you need help.",
       "Keep your class notes up-to-date for tests!"
     ];
     
     function updateTip() {
-      const tipWidget = document.getElementById("tipWidget");
+      const tipCenter = document.querySelector(".tip-center");
       const randomTip = tips[Math.floor(Math.random() * tips.length)];
-      tipWidget.textContent = "Tip of the Day: " + randomTip;
+      tipCenter.textContent = "Tip of the Day: " + randomTip;
     }
     
     setInterval(updateTip, 10000);
